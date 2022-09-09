@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: " Snack Bar ",
+      title: " Dialog ",
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(" This is Snack Bar "),
+          title: const Text(" This is dialog area "),
         ),
         body: Center(
           child: Column(
@@ -24,9 +24,23 @@ class MyApp extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  Get.snackbar("It's Snack Bar", " Hello Snack Bar ");
+                  Get.defaultDialog(
+                    title: " Dialog Title ",
+                    titleStyle: TextStyle(fontSize: 18.0),
+                    middleText: " This will be middle Area ",
+                    middleTextStyle: TextStyle(fontSize: 19.0),
+                    backgroundColor: Colors.blueGrey,
+                    radius: 80.0,
+                    textCancel: " NO ",
+                    cancelTextColor: Colors.white,
+                    textConfirm: " YES ",
+                    confirmTextColor: Colors.white,
+                    onCancel: () {},
+                    onConfirm: () {},
+                    buttonColor: Colors.pink,
+                  );
                 },
-                child: const Text(" Show Snack Bar "),
+                child: const Text(" This is show dialog button "),
               ),
             ],
           ),
