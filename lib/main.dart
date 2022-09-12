@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'HomePage.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -12,10 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: " Bottom Sheet ",
+      title: " Route Navigation for Un-named Routes ",
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(" This is Bottom Sheet GetX "),
+          title: const Text(" Route Navigation for Un-named Routes "),
         ),
         body: Center(
           child: Column(
@@ -24,26 +26,11 @@ class MyApp extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  Get.bottomSheet(
-                    Container(
-                      child: Wrap(
-                        children: <Widget>[
-                          ListTile(
-                            leading: Icon(Icons.wb_incandescent),
-                            title: Text(" Light Theme "),
-                            onTap: () => {Get.changeTheme(ThemeData.light())},
-                          ),
-                          ListTile(
-                            leading: Icon(Icons.wb_incandescent_outlined),
-                            title: Text(" Dark Theme "),
-                            onTap: () => {Get.changeTheme(ThemeData.dark())},
-                          ),
-                        ],
-                      ),
-                    ),
+                  Get.to(
+                    HomePage(),
                   );
                 },
-                child: const Text(" Bottom Sheet button "),
+                child: Text(" Go to Home "),
               ),
             ],
           ),
