@@ -27,24 +27,10 @@ class HomePage extends StatelessWidget {
               const SizedBox(height: 10.0),
               ElevatedButton(
                   onPressed: () {
-                    Get.to(
-                      DashboardPage(),
-                    );
+                    Get.toNamed("/DashboardPage");
                   },
                   child: const Text(
                     " Go to Dashboard Page ",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.bold),
-                  )),
-              const SizedBox(height: 10.0),
-              ElevatedButton(
-                  onPressed: () {
-                    Get.back();
-                  },
-                  child: const Text(
-                    " Go back to main ",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 15.0,

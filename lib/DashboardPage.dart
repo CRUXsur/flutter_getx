@@ -25,7 +25,7 @@ class DashboardPage extends StatelessWidget {
             const SizedBox(height: 10.0),
             ElevatedButton(
               onPressed: () {
-                Get.back();
+                Get.toNamed("/HomePage");
               },
               child: const Text(
                 " Go back to HomePage ",
